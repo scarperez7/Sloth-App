@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Sloth Nation</title>
+    <style>
+      body {
+        background: linear-gradient(
+          rgb(99, 204, 99),
+          rgb(57, 146, 230),
+          rgba(201, 105, 240, 0.849)
+        );
+        display: block;
+      }
+      .heading {
+        text-align: center;
+        line-height: 10px;
+      }
+
+      .picture {
+        max-width: 400px;
+        margin: 0 auto;
+        display: block;
+        box-shadow: 20px 15px 30px rgba(128, 255, 0, 0.212);
+        border: green solid 3px;
+      }
+      .p1 {
+        text-align: center;
+        line-height: 18px;
+        font-family: monospace;
+        padding: 20px;
+        background-color: rgb(228, 233, 222);
+        border-radius: 35px;
+        margin: 20px;
+        display: block;
+        border: rgba(201, 105, 240, 0.849) solid 5px;
+      }
+      .p2 {
+        text-align: center;
+        background-color: rgb(228, 233, 222);
+        font-family: monospace;
+        line-height: 18px;
+        padding: 20px;
+        margin: 20px;
+        border-radius: 35px;
+        display: block;
+        border: rgb(99, 204, 99) solid 5px;
+      }
+      .p3 {
+        text-align: center;
+        color: black;
+        font-family: monospace;
+        background-color: rgb(228, 233, 222);
+        padding: 20px;
+        margin: 20px;
+        border-radius: 35px;
+        display: block;
+        border: rgb(57, 146, 230) solid 5px;
+      }
+      .link {
+        font-weight: lighter;
+        font-size: 10px;
+        text-align: left;
+      }
+      button {
+        display: block;
+        margin: 0 auto;
+        background-color: rgb(247, 0, 255);
+        padding: 30px;
+        border-radius: 50px;
+        border: indigo solid 5px;
+      }
+      button:hover {
+        transition: 180ms;
+        background-color: gray;
+        cursor: cell;
+        border: black solid 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="heading">
+      <h1>Sloths are the greatest.</h1>
+      <h2>How have they manage to survive extintion this far?</h2>
+      <h3>Because they do exactly nothing. And thats why I love them.</h3>
+    </div>
+    <img
+      class="picture"
+      src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/019/154/original/sloth_family_tree.jpeg?1634521700"
+      alt="super cool sloth being cool"
+    />
+    <br />
+    <hr />
+    <div class="p1">
+      Sloths are very interesting. I bet you didn't know that they are strong
+      swimmers. It's pretty impressive knowing that they barley walk but can
+      move faster whilst in water. <br />
+      <span class="link">
+        Want to see a sloth swim?
+        <a href="https://www.youtube.com/watch?v=T7HGSvczDA4" target="_blank">
+          Click here! 🦥
+        </a>
+      </span>
+    </div>
+
+    <p class="p2">
+      The reason why I love sloths is because all they do is eat, sleep, and
+      hide. They don't even hide on purpose, they are just so slow, predators
+      dont even think theyre alive. They reproduce only when the female is ready
+      and they let out a scream that can be heard from 700 meters away.
+      <em> I dont know about you but that sounds pretty great.</em>
+    </p>
+
+    <p class="p3">
+      People either hate sloths or love them, which is great. What other animal
+      do you know had the entire country in a frenzy with memes? I'll wait. They
+      could be the biggest predators with their huge claws but they rather not
+      and thats the kicker!! They have the potential to be so scary and choose
+      to sleep, I honestly wish I was <strong>THAT</strong> cool.
+    </p>
+    <hr />
+    <button>More Information</button>
+    <script>
+      function list() {
+        let name = prompt("What is your name?");
+        let interested = prompt(
+          "Are you interested in being part of our newsletter?"
+        );
+        let heading = document.querySelector(".heading");
+        interested = interested.toLocaleLowerCase();
+        interested = interested.trim();
+        if (interested === "yes") {
+          prompt("What is your email?");
+          alert(
+            "Welcome to the 🦥 family, " +
+              name +
+              "! You will be emailed shortly"
+          );
+          heading.innerHTML = name + " is now part of Sloth Nation!";
+        } else {
+          alert(
+            "No problem " + name + ", thank you again for visiting our page"
+          );
+        }
+      }
+
+      let button = document.querySelector("button");
+      button.addEventListener("click", list);
+    </script>
+  </body>
+</html>
